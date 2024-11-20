@@ -36,8 +36,11 @@ jobs:
       uses: endorlabs/github-action@v1.1.6
       with:
         namespace: "darren-learn" # Modify the namespace to your Endor Labs tenant namespace.
-        sarif_file: findings.sarif
-    - name: Upload SARIF to github
-      uses: github/codeql-action/upload-sarif@v3
-      with:
-        sarif_file: findings.sarif
+        scan_secrets: true
+        scan_dependencies: true
+        additional_args: "--prune-invalid-paths"
+        # sarif_file: findings.sarif
+    # - name: Upload SARIF to github
+    #   uses: github/codeql-action/upload-sarif@v3
+    #   with:
+    #     sarif_file: findings.sarif
