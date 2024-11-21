@@ -9,8 +9,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  schedule:
-    - cron: '27 17 * * 6'
+  workflow_run:
 jobs:
   scan:
     permissions:
