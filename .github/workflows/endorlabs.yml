@@ -32,14 +32,13 @@ jobs:
     # - name: Build Package
     #   run: mvn clean install
     - name: Endor Labs scan pull request
-      uses: endorlabs/github-action@fix-artifact-name-collision
-      with:
+      uses: endorlabs/github-action@v1.1.7
         namespace: "darren-learn" # Modify the namespace to your Endor Labs tenant namespace.
         scan_secrets: true
         scan_dependencies: true
         additional_args: "--prune-invalid-paths"
     - name: Endor Labs scan pull request (repeat)
-      uses: endorlabs/github-action@fix-artifact-name-collision
+      uses: endorlabs/github-action@v1.1.7
       with:
         namespace: "darren-learn" # Modify the namespace to your Endor Labs tenant namespace.
         scan_secrets: true
